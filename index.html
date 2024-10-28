@@ -5,19 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IB Studios - Design and Web Content Creation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff00a9, #ff6c00); /* Vibrant pink gradient background */
+            background: linear-gradient(135deg, #ff00a9, #ff6c00);
             color: #fff;
+            padding-top: 60px; /* Prevents content from hiding behind the header */
         }
 
         .container {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 100%;
+            margin: 0 auto; /* Center the container */
             text-align: center;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            margin: 10px  ;  
+        }
+
+        .hero img {
+            width: 30vw;
+            max-width: 100%;
+            display: block;
+            
+            position: relative;
+            top: 50%;
+            left: 50%;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            padding: 10px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
         }
 
         h1 {
@@ -33,22 +63,106 @@
         .service-card {
             background: #fff;
             color: #000;
+            display: inline-block;
             padding: 20px;
             margin: 20px 0;
+            max-width: 20%;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation bar styles */
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: purple;
+            padding: 8px;
+            border-radius: 3px;
+        }
+
+        /* Gallery styles */
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            width: 20vw;
+        }
+
+        .gallery-item video,
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .hero img {
+                width: 80vw;
+            }
+
+            .gallery-item {
+                width: 80vw;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Welcome to IB Studios</h1>
-        <p>A versatile studio for design and web content creation, specializing in videos, images, and sounds. We cater to both corporate and individual clients, offering services for contractual jobs, NGOs, and government projects. Our team excels in both freelance remote work and on-site assignments.</p>
+    <header>
+        <img src="image1.jpg" style="position: absolute; left: 10vw; width: 100px; border-radius: 5px;" alt="logo">
+        <nav style="position: absolute; right: 5vw;">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-        <div class="service-card">
+    <div class="container">
+        <div class="hero">
+            <img src="hero.png" alt="Hero Image">
+            <div class="hero-text">
+                <h1>Welcome to IB Studios</h1>
+                <p>A versatile studio for design and web content creation, specializing in videos, images, and sounds. We cater to both corporate and individual clients, offering services for contractual jobs, 
+                    NGOs, and government projects. Our team excels in both freelance remote work and on-site assignments.</p>
+            </div>
+
+        </div>
+<div class="container"> 
+        <div class="service-card" id="services">
             <h2>Web Content Creation</h2>
-            <p>We use a combination of camera shooting and AI-generated content, leveraging perfecting Adobe tools and other online resources to deliver outstanding results.</p>
+            <p>We use a combination of camera shooting and AI-generated content, leveraging Adobe tools and other online resources to deliver outstanding results.</p>
         </div>
 
         <div class="service-card">
@@ -61,7 +175,47 @@
             <p>IB Studios collaborates with government agencies and non-profit organizations, providing creative solutions for impactful projects that make a difference.</p>
         </div>
 
-        <p>Contact us today for all your design and web content needs!</p>
+    </div>
+
+
+        <div id="gallery">
+            <div class="gallery-item">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <p id="contact">Contact us today for all your design and web content needs!</p>
+        <p>
+            <a href="mailto:contact@ibstudios.com"><i class="fas fa-envelope"></i> Email Us</a> |
+            <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </p>
     </div>
 </body>
 
