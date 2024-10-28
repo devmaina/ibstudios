@@ -15,7 +15,12 @@
             color: #fff;
             padding-top: 60px; /* Prevents content from hiding behind the header */
         }
-
+nav {
+    
+    border: black 2px ;
+    padding: 20px; 
+    border-radius: 10px; 
+}
         .container {
             max-width: 100%;
             margin: 0 auto; /* Center the container */
@@ -39,10 +44,7 @@
         }
 
         .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            text-align: center; 
             color: #fff;
             padding: 10px;
             z-index: 1000;
@@ -117,30 +119,87 @@
             border-radius: 10px;
         }
 
-        /* Responsive styles */
+
         @media (max-width: 600px) {
-            .hero img {
-                width: 80vw;
-            }
+    body {
+        padding: 2px; /* Adjusted padding for header */
+    }
 
-            .gallery-item {
-                width: 80vw;
-            }
+    header {
+        padding: 5px; /* Reduced padding in header */
+    }
 
-            h1 {
-                font-size: 2em;
-            }
+    header img {
+        width: 80px; /* Smaller logo for mobile */
+        left: 5vw; /* Adjusted position */
+    }
 
-            p {
-                font-size: 1em;
-            }
+    nav {
+        position: absolute; 
+       
+    }
+
+    nav a {
+        margin: 5px; /* Increased spacing between links */
+        font-size: 0.9em; /* Slightly smaller font size */
+        border: #000 3px; 
+
+
+    }
+    .container {
+            max-width: auto; 
+            text-align: center;
         }
+
+        
+        .hero {
+
+            position: initial;
+
+        }
+
+    .hero img {
+        width: 80vw; /* Full width for mobile */
+        position: initial;
+    }
+
+    .hero-text {
+        font-size: x-small;
+        padding: 5px; /* Reduced padding */
+        position: initial;
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller heading size */
+    }
+
+    p {
+        font-size: 1em; /* Smaller paragraph size */
+    }
+
+    .service-card {
+        max-width: 90%; /* Allow more width for cards */
+        margin: 10px auto; /* Center cards with margin */
+    }
+
+    .gallery-item {
+        width: 90vw; /* Full width for gallery items */
+    }
+
+
+.logo{
+    display: none;
+}
+
+}
+
+     
     </style>
 </head>
 
 <body>
     <header>
-        <img src="image1.jpg" style="position: absolute; left: 10vw; width: 100px; border-radius: 5px;" alt="logo">
+        <img src="image1.jpg" style="position: absolute; left: 10vw; width: 100px; border-radius: 5px;" class="logo" alt="logo">
         <nav style="position: absolute; right: 5vw;">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
@@ -152,6 +211,7 @@
     <div class="container">
         <div class="hero">
             <img src="hero.png" alt="Hero Image">
+
             <div class="hero-text">
                 <h1>Welcome to IB Studios</h1>
                 <p>A versatile studio for design and web content creation, specializing in videos, images, and sounds. We cater to both corporate and individual clients, offering services for contractual jobs, 
